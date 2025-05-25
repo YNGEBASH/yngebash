@@ -12,48 +12,503 @@
       margin: 0;
       padding: 0;
       color: #fff;
+      overflow-x: hidden; /* Prevent horizontal scrollbars */
     }
+
     .dropshadow-text {
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
     }
-    header h1 {
+
+    /* Header Styles */
+    .main-header {
+      background: url('https://i.imgur.com/5adTset.png') no-repeat center 27% / cover;
+      height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      clip-path: inset(0 0 5% 0);
+      padding: 1rem; 
+      box-sizing: border-box; 
+    }
+
+    .main-header h1 {
+      font-family: 'Bebas Neue', sans-serif; 
       font-size: 10rem;
+      color: white;
+      text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.9);
+      margin: 0;
     }
-    header p {
+
+    .main-header p {
+      font-family: 'Bebas Neue', sans-serif; 
       font-size: 3rem;
+      color: #eee;
+      text-transform: uppercase;
+      text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.75);
+      margin-top: 1rem;
+      line-height: 1.3;
     }
-    @media (max-width: 768px) {
-      header {
-        height: auto;
+
+    .main-header .highlight {
+      color: rgb(125, 249, 255);
+    }
+
+    /* Section Styles */
+    section {
+      text-align: center;
+      padding: 2rem 1rem; 
+    }
+
+    #festival-details {
+      margin-top: -2rem; 
+      font-size: 1.25em; 
+      text-transform: uppercase;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #festival-details h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    #festival-details p {
+      margin: 0.5rem 0;
+    }
+
+    #festival-details strong, #festival-details .location-label {
+      color: #ff4b2b;
+    }
+
+    #attend-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      text-transform: uppercase;
+      font-size: 2.25rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      margin-bottom: 1rem;
+    }
+
+    #attendBtn {
+      background-color: #ff4b2b;
+      border: none;
+      padding: 1rem 2rem;
+      color: #fff;
+      font-size: 1.2rem;
+      font-family: 'Bebas Neue', sans-serif;
+      cursor: pointer;
+      border-radius: 5px;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+      transition: background-color 0.3s ease;
+    }
+    #attendBtn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    #attendCount {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    /* Staff & Vendors Section */
+    #staff-vendors-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.5rem; 
+      padding: 1.5rem 1rem;
+    }
+
+    #staff-vendors-section h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      margin-bottom: 0.75rem; 
+    }
+
+    .staff-vendors-column {
+      flex: 1 1 300px; 
+      max-width: 320px; 
+      text-align: center;
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem; 
+    }
+
+    .info-box p {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .info-box a {
+      display: inline-block;
+      margin-top: 0.5rem; 
+      color: #ff4b2b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .info-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Performing Artists Section */
+    #artists-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    #artists-section .subtitle {
+      font-size: 0.9rem;
+      color: #fff;
+      opacity: 0.8;
+      margin-bottom: 1rem; 
+    }
+
+    .artist-links-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 20px; /* Row gap and column gap (column-gap is 20px) */
+      padding: 0 1rem; 
+    }
+
+    .artist-links-container a {
+      color: #ff4b2b;
+      text-decoration: none;
+      font-size: 1rem; /* Base font size for desktop and larger tablets */
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+      transition: background-color 0.2s ease;
+      /* Added/Modified for layout control */
+      box-sizing: border-box;
+      text-align: center;
+      flex-grow: 0; /* Don't allow items to grow beyond their basis */
+      flex-shrink: 1; /* Allow items to shrink if needed */
+      /* Default to 2 items per row for mobile/tablet */
+      flex-basis: calc(50% - 10px); /* (1 * 20px column-gap) / 2 items = 10px adjustment */
+    }
+    .artist-links-container a:hover {
+      background-color: rgba(255, 75, 43, 0.2); 
+    }
+
+    /* Contact Section */
+    #contact-section {
+      font-size: 0.9rem;
+      margin: 1.5rem auto;
+      color: #fff;
+      opacity: 0.9; 
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    #contact-section a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    #contact-section a:hover {
+      color: #ff4b2b;
+    }
+
+    /* --- Media Queries for Mobile Compatibility --- */
+
+    @media (max-width: 992px) { /* Larger tablets and small desktops */
+        .main-header h1 {
+            font-size: 8rem;
+        }
+        .main-header p {
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) { /* Tablets and large phones */
+      .main-header {
+        height: auto; 
+        min-height: 50vh; 
+        clip-path: none; 
+        padding: 3rem 1rem; 
+      }
+
+      .main-header h1 {
+        font-size: 5rem; 
+      }
+
+      .main-header p {
+        font-size: 1.75rem; 
+      }
+
+      #festival-details {
+        margin-top: 0; 
+        font-size: 1.1em;
         padding: 2rem 1rem;
-        clip-path: none;
       }
-      title {
-        height:auto;
-        width: auto;
+
+      #festival-details h2 {
+        font-size: 2.5rem;
       }
-      header h1 {
-        font-size: 3rem;
-        padding: 0 1rem;
+
+      #attend-section h2 {
+        font-size: 2rem;
       }
-      header p {
-        font-size: 1.25rem;
-        padding: 0 1rem;
+
+      #attendBtn {
+        padding: 0.9rem 1.8rem; 
+        font-size: 1.1rem;
       }
-      section {
-        padding: 1rem;
+
+      .staff-vendors-column {
+         flex-basis: 45%; 
+         max-width: none; 
       }
-      section h2, section h3 {
-        font-size: 1.5rem;
+
+      #artists-section h2 {
+        font-size: 1.8rem;
       }
+      .artist-links-container a {
+        font-size: 0.95rem; /* Font size for artists on medium screens */
+        /* flex-basis is still calc(50% - 10px) from base, creating 2-wide */
+      }
+    }
+    
+    @media (max-width: 480px) { /* Smaller phones */
+      .main-header h1 {
+        font-size: 3.5rem; 
+        text-shadow: 4px 4px 10px rgba(0,0,0,0.9);
+      }
+
+      .main-header p {
+        font-size: 1.25rem; 
+        text-shadow: 3px 3px 8px rgba(0,0,0,0.75);
+      }
+
+      #festival-details {
+        font-size: 1em;
+        padding: 1.5rem 1rem;
+      }
+      #festival-details h2 {
+        font-size: 2rem;
+      }
+      #festival-details p {
+        font-size: 0.9rem; 
+        line-height: 1.5;
+      }
+
+      #attend-section h2 {
+        font-size: 1.75rem;
+      }
+
       #attendBtn {
         padding: 0.75rem 1.5rem;
         font-size: 1rem;
+        width: 80%; 
+        max-width: 300px;
+      }
+
+      .staff-vendors-column {
+         flex-basis: 100%; 
+      }
+
+      #artists-section h2 {
+        font-size: 1.6rem;
+      }
+      /* Artist links on small phones */
+      .artist-links-container a {
+        font-size: 0.9rem; /* Adjust font for very small screens */
+        flex-basis: 100%; /* 1 item per row for very small screens */
       }
     }
+
+    /* --- Desktop Specific Overrides --- */
+    @media (min-width: 993px) {
+      /* For desktop, make artist links 4-wide */
+      .artist-links-container a {
+        flex-basis: calc(25% - 15px); /* (3 * 20px column-gap) / 4 items = 15px adjustment */
+        font-size: 1rem; /* Ensure desktop font size if it was changed for mobile */
+      }
+    }
+
   </style>
 </head>
 <body>
-<!-- The rest of your site remains unchanged -->
 
-  
+<header class="main-header">
+  <h1>YNG E's SUMMER FEST / BIRTHDAY BASH</h1>
+  <p>Johnstown's biggest <span class="highlight">FREE</span> hip-hop event!<br>Come vibe with us - Everyone is welcome!</p>
+</header>
+
+<section id="festival-details">
+  <h2>Festival Details</h2>
+  <p><strong >Date:</strong> Friday, July 25th, 2025</p>
+  <p><strong >Time:</strong> 6PM - 11PM</p>
+  <p><span class="location-label">Location:</span> Johnstown PA<br>Venue Address Available Soon!</p>
+</section>
+
+<section id="attend-section">
+  <h2>Are you attending?</h2>
+  <button id="attendBtn">I'm Attending!</button>
+  <p id="attendCount">0 people are attending!</p>
+</section>
+
+<section id="staff-vendors-section">
+  <div class="staff-vendors-column">
+    <h3 class="dropshadow-text">DJ / SOUND ENGINEERS</h3>
+    <div class="info-box">
+      <p class="dropshadow-text">CamWithaK</p>
+      <a class="dropshadow-text" href="https://www.instagram.com/camwithak/">Info</a>
+    </div>
+    <div class="info-box">
+      <p class="dropshadow-text">DJZAYBRICK</p>
+      <a class="dropshadow-text" href="https://linktr.ee/zaybrick">Info</a>
+    </div>
+  </div>
+  <div class="staff-vendors-column">
+    <h3 class="dropshadow-text">HOST</h3>
+    <div class="info-box">
+      <p class="dropshadow-text">YNG E</p>
+      <a class="dropshadow-text" href="https://www.instagram.com/ynge_music/">Info</a>
+    </div>
+  </div>
+  <div class="staff-vendors-column">
+    <h3 class="dropshadow-text">FOOD VENDORS</h3>
+    <div class="info-box">
+      <p class="dropshadow-text">Looking for Vendors!</p>
+    </div>
+    <div class="info-box">
+      <p class="dropshadow-text">Looking for Vendors!</p>
+    </div>
+  </div>
+</section>
+
+<section id="artists-section">
+  <h2>Performing Artists</h2>
+  <p class="subtitle">click for links</p>
+  <div class="artist-links-container">
+    <a href="https://linktr.ee/Itss4K?utm_source=linktree_profile_share">4K</a>
+    <a href="https://www.instagram.com/xangmichaellex/">Ang Michaelle</a>
+    <a href="https://www.instagram.com/chuckraps/">Chuckraps</a>
+    <a href="https://www.instagram.com/deshawntherealist/">Deshawntherealist</a>
+    <a href="https://linktr.ee/emoney_from_da_p?utm_source=linktree_profile_share">Emoney</a>
+    <a href="https://www.instagram.com/ethancsquared/">Ethan Chrisrie</a>
+    <a href="https://www.instagram.com/gabrielhelbig/">G-HELBIG</a>
+    <a href="https://www.instagram.com/heavycheckcell/">Heavycheckcell</a>
+    <a href="https://www.instagram.com/ksg.kel/">Ksg Papsun</a>
+    <a href="https://www.instagram.com/official_luvsik/">LUVSIK</a>
+    <a href="https://www.instagram.com/mayhemusik/">Mayhem</a>
+    <a href="https://www.instagram.com/jimmygeorge814/">Mes-Geo</a>
+    <a href="https://www.instagram.com/mirxclusivee/">MirXclusivee</a>
+    <a href="https://www.instagram.com/no_label_music98/">No-Label</a>
+    <a href="https://linktr.ee/PLVG888">PLVG</a>
+    <a href="https://linktr.ee/42RemDeezy?utm_source=linktree_profile_share">RemDeezy</a>
+    <a href="https://www.instagram.com/ashanntii___/">Shantmoneyy</a>
+    <a href="https://linktr.ee/sheekchapo6">Sheek Chapo</a>
+    <a href="https://www.instagram.com/shish_kanak/">Shish-Kanak</a>
+    <a href="https://www.instagram.com/814.simeon/">Simeon Rosage</a>
+    <a href="https://www.instagram.com/thechosenone1942/">T.C.O</a>
+    <a href="https://www.instagram.com/big.yrn/">YRN</a>
+    <a href="https://www.instagram.com/yvngjt_777/">YVNG JT</a>
+    <a href="https://www.instagram.com/zeeoo814/">Zeeoo</a>
+  </div>
+</section>
+
+<div id="contact-section">
+  FOR INFO OR INQUIRIES PLEASE CONTACT: <a href="mailto:yngebash@gmail.com">yngebash@gmail.com</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const firebaseConfig = {
+    // Your Firebase config is here. For security, consider environment variables or other secure methods for API keys in production.
+    apiKey: "AIzaSyCUghiHlawjj8Ep36BrKzFrN2e-LqHvZGg", // Keep this as provided by user for now
+    authDomain: "yng-e-summer-bash.firebaseapp.com",
+    databaseURL: "https://yng-e-summer-bash-default-rtdb.firebaseio.com",
+    projectId: "yng-e-summer-bash",
+    storageBucket: "yng-e-summer-bash.appspot.com",
+    messagingSenderId: "526814268816",
+    appId: "1:526814268816:web:3f9b7f090cf9c5cc92f715",
+    measurementId: "G-DHC0WV1LS7"
+  };
+
+  if (typeof firebase !== 'undefined') {
+    try {
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+      const ref = db.ref('attendees');
+
+      const attendBtn = document.getElementById('attendBtn');
+      const countText = document.getElementById('attendCount');
+
+      if (attendBtn && countText) {
+        ref.on('value', snapshot => {
+          const count = snapshot.val() || 0;
+          countText.textContent = `${count} people are attending!`;
+        }, error => {
+          console.error("Firebase read error:", error);
+          countText.textContent = "Could not load attendee count.";
+        });
+
+        if (localStorage.getItem('hasAttended')) {
+          attendBtn.textContent = 'THANK YOU!';
+          attendBtn.disabled = true;
+        }
+
+        attendBtn.addEventListener('click', () => {
+          if (!localStorage.getItem('hasAttended')) {
+            ref.transaction(current => (current || 0) + 1, 
+              (error, committed, snapshot) => {
+                if (error) {
+                  console.error('Transaction failed abnormally!', error);
+                } else if (!committed) {
+                  console.log('Transaction not committed.');
+                } else {
+                  console.log('Attendee count incremented!');
+                  localStorage.setItem('hasAttended', 'true');
+                  attendBtn.textContent = 'THANK YOU!';
+                  attendBtn.disabled = true;
+
+                  if (typeof confetti === 'function') {
+                    const rect = attendBtn.getBoundingClientRect();
+                    const x = (rect.left + rect.width / 2) / window.innerWidth;
+                    const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                    confetti({
+                      particleCount: 100,
+                      spread: 70,
+                      origin: { x, y }
+                    });
+                  }
+                }
+            });
+          }
+        });
+      } else {
+        if (!attendBtn) console.error("Button with ID 'attendBtn' not found.");
+        if (!countText) console.error("Element with ID 'attendCount' not found.");
+      }
+    } catch (e) {
+      console.error("Firebase initialization error:", e);
+      if (document.getElementById('attendCount')) {
+        document.getElementById('attendCount').textContent = "Attendance feature unavailable.";
+      }
+    }
+  } else {
+    console.error('Firebase is not defined. Make sure the Firebase scripts are loaded correctly.');
+    if (document.getElementById('attendCount')) {
+        document.getElementById('attendCount').textContent = "Attendance feature unavailable.";
+    }
+  }
+});
+</script>
+</body>
+</html>
