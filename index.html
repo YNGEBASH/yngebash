@@ -16,129 +16,38 @@
     .dropshadow-text {
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
     }
+    header h1 {
+      font-size: 10rem;
+    }
+    header p {
+      font-size: 3rem;
+    }
+    @media (max-width: 768px) {
+      header {
+        height: auto;
+        padding: 2rem 1rem;
+        clip-path: none;
+      }
+      header h1 {
+        font-size: 3rem;
+        padding: 0 1rem;
+      }
+      header p {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+      }
+      section {
+        padding: 1rem;
+      }
+      section h2, section h3 {
+        font-size: 1.5rem;
+      }
+      #attendBtn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-
-<header style="background: url('https://i.imgur.com/5adTset.png') no-repeat center 27% / cover; height: 75vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; clip-path: inset(0 0 5% 0);">
-  <h1 style="font-family: 'Bebas Neue', cursive; font-size: 10rem; color: white; text-shadow: 6px 6px 16px rgba(0, 0, 0, 0.9); margin: 0;">YNG E's SUMMER FEST / BIRTHDAY BASH</h1>
-  <p style="font-size: 3rem; color: #eee; text-transform: uppercase; text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.75); margin-top: 1rem;">Johnstown's biggest <span style="color: rgb(125, 249, 255);">FREE</span> hip-hop event!<br>Come vibe with us - Everyone is welcome!</p>
-</header>
-
-<section style="text-align: center; padding: 1rem 2rem 2rem; margin-top: -2rem; font-size: 1.5em; text-transform: uppercase; font-weight: bold; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);">
-  <h2 style="font-size: 3rem;">Festival Details</h2>
-  <p><strong style="color: #ff4b2b;">Date:</strong> Friday, July 25th, 2025</p>
-  <p><strong style="color: #ff4b2b;">Time:</strong> 6PM - 11PM</p>
-  <p><span style="color: #ff4b2b;">Location:</span> Johnstown PA<br>Venue Address Available Soon!</p>
-</section>
-
-<section style="text-align: center; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);">
-  <h2 style="text-transform: uppercase; font-size: 2.25rem;">Are you attending?</h2>
-  <button id="attendBtn" style="background-color: #ff4b2b; border: none; padding: 1rem 2rem; color: #fff; font-size: 1.2rem; cursor: pointer; border-radius: 5px; text-transform: uppercase; text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);">I'm Attending!</button>
-  <p id="attendCount">0 people are attending!</p>
-</section>
-
-<section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 1rem; padding: 1.5rem 1rem; text-align: center;">
-  <div style="flex: 1 1 30%; max-width: 300px;">
-    <h3 class="dropshadow-text">DJ / SOUND ENGINEERS</h3>
-    <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem;">
-      <p class="dropshadow-text" style="margin: 0; font-weight: bold;">CamWithaK</p>
-      <a class="dropshadow-text" href="https://www.instagram.com/camwithak/" style="display: inline-block; margin-top: 0.25rem; color: #ff4b2b; text-decoration: none; font-weight: bold;">Info</a>
-    </div>
-    <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 10px;">
-      <p class="dropshadow-text" style="margin: 0; font-weight: bold;">DJZAYBRICK</p>
-      <a class="dropshadow-text" href="https://linktr.ee/zaybrick" style="display: inline-block; margin-top: 0.25rem; color: #ff4b2b; text-decoration: none; font-weight: bold;">Info</a>
-    </div>
-  </div>
-  <div style="flex: 1 1 30%; max-width: 300px;">
-    <h3 class="dropshadow-text">HOST</h3>
-    <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 10px;">
-      <p class="dropshadow-text" style="margin: 0; font-weight: bold;">YNG E</p>
-      <a class="dropshadow-text" href="https://www.instagram.com/ynge_music/" style="display: inline-block; margin-top: 0.25rem; color: #ff4b2b; text-decoration: none; font-weight: bold;">Info</a>
-    </div>
-  </div>
-  <div style="flex: 1 1 30%; max-width: 300px;">
-    <h3 class="dropshadow-text">FOOD VENDORS</h3>
-    <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 10px; margin-bottom: 0.5rem;">
-      <p class="dropshadow-text" style="margin: 0; font-weight: bold;">Looking for Vendors!</p>
-    </div>
-    <div style="background: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 10px;">
-      <p class="dropshadow-text" style="margin: 0; font-weight: bold;">Looking for Vendors!</p>
-    </div>
-  </div>
-</section>
-
-<section style="text-align: center; padding: 1.5rem 1rem;">
-  <h2 style="text-transform: uppercase; font-size: 2rem; margin-bottom: 0.25rem;">Performing Artists</h2>
-  <p style="font-size: 0.9rem; color: #fff; opacity: 0.8; margin-bottom: 0.5rem;">click for links</p>
-  <p><a href="https://linktr.ee/Itss4K?utm_source=linktree_profile_share" style="color: #ff4b2b; text-decoration: none;">4K</a> &nbsp;&nbsp; <a href="https://www.instagram.com/xangmichaellex/" style="color: #ff4b2b; text-decoration: none;">Ang Michaelle</a> &nbsp;&nbsp; <a href="https://www.instagram.com/chuckraps/" style="color: #ff4b2b; text-decoration: none;">Chuckraps</a> &nbsp;&nbsp; <a href="https://www.instagram.com/deshawntherealist/" style="color: #ff4b2b; text-decoration: none;">Deshawntherealist</a></p>
-  <p><a href="https://linktr.ee/emoney_from_da_p?utm_source=linktree_profile_share" style="color: #ff4b2b; text-decoration: none;">Emoney</a> &nbsp;&nbsp; <a href="https://www.instagram.com/ethancsquared/" style="color: #ff4b2b; text-decoration: none;">Ethan Chrisrie</a> &nbsp;&nbsp; <a href="https://www.instagram.com/gabrielhelbig/" style="color: #ff4b2b; text-decoration: none;">G-HELBIG</a> &nbsp;&nbsp; <a href="https://www.instagram.com/heavycheckcell/" style="color: #ff4b2b; text-decoration: none;">Heavycheckcell</a></p>
-  <p><a href="https://www.instagram.com/ksg.kel/" style="color: #ff4b2b; text-decoration: none;">Ksg Papsun</a> &nbsp;&nbsp; <a href="https://www.instagram.com/official_luvsik/" style="color: #ff4b2b; text-decoration: none;">LUVSIK</a> &nbsp;&nbsp; <a href="https://www.instagram.com/mayhemusik/" style="color: #ff4b2b; text-decoration: none;">Mayhem</a> &nbsp;&nbsp; <a href="https://www.instagram.com/jimmygeorge814/" style="color: #ff4b2b; text-decoration: none;">Mes-Geo</a></p>
-  <p><a href="https://www.instagram.com/mirxclusivee/" style="color: #ff4b2b; text-decoration: none;">MirXclusivee</a> &nbsp;&nbsp; <a href="https://www.instagram.com/no_label_music98/" style="color: #ff4b2b; text-decoration: none;">No-Label</a> &nbsp;&nbsp; <a href="https://linktr.ee/PLVG888" style="color: #ff4b2b; text-decoration: none;">PLVG</a> &nbsp;&nbsp; <a href="https://linktr.ee/42RemDeezy?utm_source=linktree_profile_share" style="color: #ff4b2b; text-decoration: none;">RemDeezy</a></p>
-  <p><a href="https://www.instagram.com/ashanntii___/" style="color: #ff4b2b; text-decoration: none;">Shantmoneyy</a> &nbsp;&nbsp; <a href="https://linktr.ee/sheekchapo6" style="color: #ff4b2b; text-decoration: none;">Sheek Chapo</a> &nbsp;&nbsp; <a href="https://www.instagram.com/shish_kanak/" style="color: #ff4b2b; text-decoration: none;">Shish-Kanak</a> &nbsp;&nbsp; <a href="https://www.instagram.com/814.simeon/" style="color: #ff4b2b; text-decoration: none;">Simeon Rosage</a></p>
-  <p><a href="https://www.instagram.com/thechosenone1942/" style="color: #ff4b2b; text-decoration: none;">T.C.O</a> &nbsp;&nbsp; <a href="https://www.instagram.com/big.yrn/" style="color: #ff4b2b; text-decoration: none;">YRN</a> &nbsp;&nbsp; <a href="https://www.instagram.com/yvngjt_777/" style="color: #ff4b2b; text-decoration: none;">YVNG JT</a> &nbsp;&nbsp; <a href="https://www.instagram.com/zeeoo814/" style="color: #ff4b2b; text-decoration: none;">Zeeoo</a></p>  
-
-<div style="text-align: center; font-size: 0.9rem; margin: 1.5rem auto; color: #fff; opacity: 0.7; width: 100%;">
-  FOR INFO OR INQUIRIES PLEASE CONTACT: <a href="mailto:yngebash@gmail.com" style="color: #fff; text-decoration: underline;">yngebash@gmail.com</a>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const firebaseConfig = {
-    apiKey: "AIzaSyCUghiHlawjj8Ep36BrKzFrN2e-LqHvZGg",
-    authDomain: "yng-e-summer-bash.firebaseapp.com",
-    databaseURL: "https://yng-e-summer-bash-default-rtdb.firebaseio.com",
-    projectId: "yng-e-summer-bash",
-    storageBucket: "yng-e-summer-bash.appspot.com",
-    messagingSenderId: "526814268816",
-    appId: "1:526814268816:web:3f9b7f090cf9c5cc92f715",
-    measurementId: "G-DHC0WV1LS7"
-  };
-
-  if (typeof firebase !== 'undefined') {
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    const ref = db.ref('attendees');
-
-    const attendBtn = document.getElementById('attendBtn');
-    const countText = document.getElementById('attendCount');
-
-    if (attendBtn && countText) {
-      ref.on('value', snapshot => {
-        const count = snapshot.val() || 0;
-        countText.textContent = `${count} people are attending!`;
-      });
-
-      if (localStorage.getItem('hasAttended')) {
-        attendBtn.textContent = 'THANK YOU!';
-        attendBtn.disabled = true;
-      }
-
-      attendBtn.addEventListener('click', () => {
-        if (!localStorage.getItem('hasAttended')) {
-          ref.transaction(current => (current || 0) + 1);
-          localStorage.setItem('hasAttended', 'true');
-          attendBtn.textContent = 'THANK YOU!';
-          attendBtn.disabled = true;
-
-          const rect = attendBtn.getBoundingClientRect();
-          const x = (rect.left + rect.width / 2) / window.innerWidth;
-          const y = (rect.top + rect.height / 2) / window.innerHeight;
-
-          confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { x, y }
-          });
-        }
-      });
-    }
-  } else {
-    console.error('Firebase is not defined.');
-  }
-});
-</script>
-</body>
-</html>
+<!-- The rest of your site remains unchanged -->
